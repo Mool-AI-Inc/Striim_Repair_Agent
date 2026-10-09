@@ -1,0 +1,284 @@
+{
+  "captured_from": "sarah_moolai.Traill",
+  "staged": "the whole file",
+  "verified": false,
+  "note": "STAGED, AND THE CONSOLE RESPONSE SHAPE IS UNVERIFIED. Read this before trusting it. The health record uses real shapes copied from trial5_halt.json - appHealthMap fields, the checkpointInformation list, waStoreHealthMap's {fqWAStoreName, writeRate, lastWriteTime}, the PostgresCDC source-naming pattern observed live on harrybwatson.Vercel_to_Azure_SQL_CDC_PostgresCDC. The ERROR TEXT is real: it is what Striim's UI displayed during live testing. What is NOT verified is the shape of a SELECT response from /api/v2/tungsten - no capture of one exists, because the only console responses ever captured are DESCRIBE. The envelope here (command / executionStatus / output / responseCode) is copied from a real DESCRIBE response and the rows inside it are a guess at what a WActionStore returns. get_rejected_rows classifies five different shapes precisely so that being wrong here is survivable: if the live cluster answers differently, the tool reports what it actually got and hands over the literal statement. Do not delete this note when the shape is confirmed - amend it.",
+  "health": {
+    "appHealthMap": {
+      "sarah_moolai.Traill": {
+        "lastModifiedTime": { "$ago_ms": 259200000 },
+        "checkpointInformation": [
+          {
+            "firstRecordedCheckpoint": {
+              "checkpointDuration": "118ms",
+              "checkpointType": "normal",
+              "checkpointTime": "2026-08-06 09:14:02"
+            }
+          },
+          {
+            "lastTwoRecordedCheckpoints": [
+              {
+                "checkpointDuration": "131ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-07 11:42:18"
+              },
+              {
+                "checkpointDuration": "127ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-07 11:42:48"
+              }
+            ]
+          }
+        ],
+        "rate": 0.0,
+        "appId": { "stringRep": "01f19a04-2b71-4c8e-9f21-3ad7be5510cc" },
+        "cpuRate": 0.0,
+        "fqAppName": "sarah_moolai.Traill",
+        "status": "HALT",
+        "loadLevel": "NOT_AVAILABLE"
+      }
+    },
+    "issuesList": [],
+    "sourceHealthMap": {
+      "sarah_moolai.Traill_PostgresCDC": {
+        "eventRate": 0.0,
+        "lastEventTime": { "$ago_ms": 240000 },
+        "fqSourceName": "sarah_moolai.Traill_PostgresCDC"
+      }
+    },
+    "targetHealthMap": {
+      "sarah_moolai.Traill_Target": {
+        "eventRate": 0,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.11,
+                "min": 0.09,
+                "max": 0.14,
+                "count": 3,
+                "latest": 0.11
+              },
+              "at": 1785787475154,
+              "source": "sarah_moolai.Traill_PostgresCDC",
+              "type": "Idle",
+              "lee": 0.11,
+              "target": "sarah_moolai.Traill_Target"
+            }
+          ]
+        },
+        "fqTargetName": "sarah_moolai.Traill_Target",
+        "lastWriteTime": { "$ago_ms": 240000 }
+      }
+    },
+    "waStoreHealthMap": {
+      "sarah_moolai.Traill_ExceptionStore": {
+        "fqWAStoreName": "sarah_moolai.Traill_ExceptionStore",
+        "writeRate": 0.4,
+        "lastWriteTime": { "$ago_ms": 238000 }
+      }
+    },
+    "stateChangeList": [],
+    "clusterSize": 3,
+    "elasticSearch": true,
+    "derbyAlive": true,
+    "agentCount": 0,
+    "kafkaHealthMap": {},
+    "cacheHealthMap": {},
+    "id": "01f19121-5749-35c3-9177-e6ea69f9970d"
+  },
+  "health_after_action": {
+    "_note": "STAGED second instant. A capture is one moment and 'repaired, then recovered' needs two. This is the same record with the pipeline running again: status RUNNING, both ends moving, and the checkpoint advanced. Only the status and the timestamps differ from the record above.",
+    "appHealthMap": {
+      "sarah_moolai.Traill": {
+        "lastModifiedTime": { "$ago_ms": 259200000 },
+        "checkpointInformation": [
+          {
+            "firstRecordedCheckpoint": {
+              "checkpointDuration": "118ms",
+              "checkpointType": "normal",
+              "checkpointTime": "2026-08-06 09:14:02"
+            }
+          },
+          {
+            "lastTwoRecordedCheckpoints": [
+              {
+                "checkpointDuration": "124ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-07 11:48:12"
+              },
+              {
+                "checkpointDuration": "119ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-07 11:48:42"
+              }
+            ]
+          }
+        ],
+        "rate": 14.0,
+        "appId": { "stringRep": "01f19a04-2b71-4c8e-9f21-3ad7be5510cc" },
+        "cpuRate": 0.2,
+        "fqAppName": "sarah_moolai.Traill",
+        "status": "RUNNING",
+        "loadLevel": "NOT_AVAILABLE"
+      }
+    },
+    "issuesList": [],
+    "sourceHealthMap": {
+      "sarah_moolai.Traill_PostgresCDC": {
+        "eventRate": 14.0,
+        "lastEventTime": { "$ago_ms": 5000 },
+        "fqSourceName": "sarah_moolai.Traill_PostgresCDC"
+      }
+    },
+    "targetHealthMap": {
+      "sarah_moolai.Traill_Target": {
+        "eventRate": 14,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.09,
+                "min": 0.08,
+                "max": 0.11,
+                "count": 4,
+                "latest": 0.09
+              },
+              "at": 1785787475154,
+              "source": "sarah_moolai.Traill_PostgresCDC",
+              "type": "Running",
+              "lee": 0.09,
+              "target": "sarah_moolai.Traill_Target"
+            }
+          ]
+        },
+        "fqTargetName": "sarah_moolai.Traill_Target",
+        "lastWriteTime": { "$ago_ms": 4000 }
+      }
+    },
+    "waStoreHealthMap": {
+      "sarah_moolai.Traill_ExceptionStore": {
+        "fqWAStoreName": "sarah_moolai.Traill_ExceptionStore",
+        "writeRate": 0.0,
+        "lastWriteTime": { "$ago_ms": 238000 }
+      }
+    },
+    "stateChangeList": [],
+    "clusterSize": 3,
+    "elasticSearch": true,
+    "derbyAlive": true,
+    "agentCount": 0,
+    "kafkaHealthMap": {},
+    "cacheHealthMap": {},
+    "id": "01f19121-5749-35c3-9177-e6ea69f9970d"
+  },
+  "console": {
+    "SELECT * FROM sarah_moolai.Traill_ExceptionStore LIMIT 5;": [
+      {
+        "command": "SELECT * FROM sarah_moolai.Traill_ExceptionStore LIMIT 5",
+        "executionStatus": "Success",
+        "responseCode": 200,
+        "output": [
+          {
+            "entityName": "sarah_moolai.Traill_Target",
+            "className": "org.postgresql.util.PSQLException",
+            "errorCode": "23505",
+            "errorMessage": "ERROR: duplicate key value violates unique constraint \"target_pkey\"\n  Detail: Key (id)=(9) already exists.",
+            "action": "DISCARD",
+            "eventContent": "{\"id\":9,\"name\":\"ariadne\",\"city\":\"lisbon\"}",
+            "timeStamp": "2026-08-07 11:43:02"
+          },
+          {
+            "entityName": "sarah_moolai.Traill_Target",
+            "className": "org.postgresql.util.PSQLException",
+            "errorCode": "23505",
+            "errorMessage": "ERROR: duplicate key value violates unique constraint \"target_pkey\"\n  Detail: Key (id)=(10) already exists.",
+            "action": "DISCARD",
+            "eventContent": "{\"id\":10,\"name\":\"benedek\",\"city\":\"porto\"}",
+            "timeStamp": "2026-08-07 11:43:02"
+          },
+          {
+            "entityName": "sarah_moolai.Traill_Target",
+            "className": "org.postgresql.util.PSQLException",
+            "errorCode": "23505",
+            "errorMessage": "ERROR: duplicate key value violates unique constraint \"target_pkey\"\n  Detail: Key (id)=(11) already exists.",
+            "action": "DISCARD",
+            "eventContent": "{\"id\":11,\"name\":\"cosima\",\"city\":\"braga\"}",
+            "timeStamp": "2026-08-07 11:43:03"
+          },
+          {
+            "entityName": "sarah_moolai.Traill_Target",
+            "className": "org.postgresql.util.PSQLException",
+            "errorCode": "23505",
+            "errorMessage": "ERROR: duplicate key value violates unique constraint \"target_pkey\"\n  Detail: Key (id)=(12) already exists.",
+            "action": "DISCARD",
+            "eventContent": "{\"id\":12,\"name\":\"dara\",\"city\":\"faro\"}",
+            "timeStamp": "2026-08-07 11:43:03"
+          }
+        ]
+      }
+    ],
+    "DESCRIBE sarah_moolai.Traill_PostgresCDC;": [
+      {
+        "command": "DESCRIBE sarah_moolai.Traill_PostgresCDC",
+        "executionStatus": "Success",
+        "responseCode": 200,
+        "output": [
+          {
+            "entityType": "SOURCE",
+            "name": "sarah_moolai.Traill_PostgresCDC",
+            "created": "2026-08-04 14:22:10",
+            "adapterName": "PostgreSQLReader",
+            "properties": {
+              "adaptername": "PostgreSQLReader",
+              "connectionurl": "jdbc:postgresql://ep-cool-darkness-12345.eu-central-1.aws.neon.tech:5432/neondb",
+              "tables": "public.source",
+              "replicationslotname": "striim_slot",
+              "connectorclass": "pgoutput",
+              "username": "neondb_owner"
+            },
+            "outputsTo": [{ "stream": "sarah_moolai.Traill_SourceOutputStream" }],
+            "Checkpoint": [
+              {
+                "Application Name": "sarah_moolai.Traill_PostgresCDC",
+                "Source Name": "SARAH_MOOLAI:SOURCE:TRAILL_POSTGRESCDC:1",
+                "Source Current Position": {
+                  "Seek Position": "0",
+                  "Creation Time": "2026/08/07-11:42:48",
+                  "Offset Begin": "0",
+                  "Offset End": "0",
+                  "Record Length": "0",
+                  "Source Name": "public.source",
+                  "Actual name": ""
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "DESCRIBE sarah_moolai.Traill_Target;": [
+      {
+        "command": "DESCRIBE sarah_moolai.Traill_Target",
+        "executionStatus": "Success",
+        "responseCode": 200,
+        "output": [
+          {
+            "entityType": "TARGET",
+            "name": "sarah_moolai.Traill_Target",
+            "created": "2026-08-04 14:22:31",
+            "adapterName": "DatabaseWriter",
+            "properties": {
+              "adaptername": "DatabaseWriter",
+              "connectionurl": "jdbc:postgresql://ep-cool-darkness-12345.eu-central-1.aws.neon.tech:5432/neondb",
+              "tables": "public.source,public.target",
+              "batchpolicy": "eventcount:1000,interval:30s",
+              "username": "neondb_owner"
+            },
+            "inputStream": "Traill_SourceOutputStream"
+          }
+        ]
+      }
+    ]
+  }
+}

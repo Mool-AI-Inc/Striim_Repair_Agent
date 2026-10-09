@@ -1,0 +1,9 @@
+setup.bat
+.env
+state/
+*.pyc
+__pycache__/
+.pytest_cache/
+fault_*.json
+credentials.txt
+credentials.txt

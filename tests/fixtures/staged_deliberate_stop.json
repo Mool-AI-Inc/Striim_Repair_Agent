@@ -1,0 +1,97 @@
+{
+  "captured_from": "sarah_moolai.Trial3",
+  "captured_at": "2026-08-05T16:02:22",
+  "derived_from": "trial5_halt.json (real capture, 576 apps)",
+  "staged": "stateChangeList only",
+  "note": "REAL Trial3 record with a STAGED stateChangeList. Trial3 really is STOPPED on the cluster, but the real stateChangeList was empty of application events entirely - it held nothing but Global.* server transitions - so the STOPPING -> STOPPED path that proves a shutdown was deliberate cannot be captured, only staged. See real_trial3_stopped.json for the untouched record, where looks_deliberate is correctly null rather than false.",
+  "health": {
+    "appHealthMap": {
+      "sarah_moolai.Trial3": {
+        "lastModifiedTime": {
+          "$ago_ms": 250752401
+        },
+        "checkpointInformation": null,
+        "rate": 0.0,
+        "appId": {
+          "stringRep": "01f18ed9-e349-ad61-9177-e6ea69f9970d"
+        },
+        "cpuRate": 0.0001213788,
+        "fqAppName": "sarah_moolai.Trial3",
+        "status": "STOPPED",
+        "loadLevel": "NOT_AVAILABLE"
+      }
+    },
+    "sourceHealthMap": {
+      "sarah_moolai.Trial3_FileReaderSource": {
+        "eventRate": 0.0,
+        "lastEventTime": {
+          "$ago_ms": 188083229
+        },
+        "fqSourceName": "sarah_moolai.Trial3_FileReaderSource"
+      }
+    },
+    "targetHealthMap": {
+      "sarah_moolai.File_Trial3_Target": {
+        "eventRate": 0,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.078,
+                "min": 0.078,
+                "max": 0.078,
+                "count": 1,
+                "latest": 0.078
+              },
+              "at": 1785784581635,
+              "source": "sarah_moolai.Trial3_FileReaderSource",
+              "type": "Idle",
+              "lee": 0.078,
+              "target": "sarah_moolai.File_Trial3_Target"
+            }
+          ]
+        },
+        "fqTargetName": "sarah_moolai.File_Trial3_Target",
+        "lastWriteTime": {
+          "$ago_ms": 188083223
+        }
+      }
+    },
+    "waStoreHealthMap": {
+      "sarah_moolai.Trial3_ExceptionStore": {
+        "fqWAStoreName": "sarah_moolai.Trial3_ExceptionStore",
+        "writeRate": 0,
+        "lastWriteTime": 0
+      }
+    },
+    "issuesList": [],
+    "stateChangeList": [
+      {
+        "currentStatus": "STOPPING",
+        "type": "APPLICATION",
+        "fqName": "sarah_moolai.Trial3",
+        "previousStatus": "RUNNING",
+        "timestamp": {
+          "$ago_ms": 190000
+        }
+      },
+      {
+        "currentStatus": "STOPPED",
+        "type": "APPLICATION",
+        "fqName": "sarah_moolai.Trial3",
+        "previousStatus": "STOPPING",
+        "timestamp": {
+          "$ago_ms": 180000
+        }
+      }
+    ],
+    "clusterSize": 3,
+    "elasticSearch": true,
+    "derbyAlive": true,
+    "agentCount": 0,
+    "kafkaHealthMap": {},
+    "cacheHealthMap": {},
+    "id": "01f19121-5749-35c3-9177-e6ea69f9970d"
+  },
+  "console": {}
+}

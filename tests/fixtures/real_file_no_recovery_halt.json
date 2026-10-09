@@ -1,0 +1,283 @@
+{
+  "captured_from": "RPFinalProd.SentiFile",
+  "captured_at": "2026-08-05T16:02:22",
+  "derived_from": "trial5_halt.json (real capture, 576 apps)",
+  "note": "REAL. A file pipeline in HALT with no checkpointInformation at all - recovery was never enabled, so every start is a cold start and a restart re-reads the whole file into an append-only target. One of 52 like it on the cluster.",
+  "health": {
+    "appHealthMap": {
+      "RPFinalProd.SentiFile": {
+        "lastModifiedTime": {
+          "$ago_ms": 12279020016
+        },
+        "checkpointInformation": null,
+        "rate": 0.0,
+        "appId": {
+          "stringRep": "01f12174-651a-6e71-a4ca-0e296a66adf9"
+        },
+        "cpuRate": 0.0,
+        "fqAppName": "RPFinalProd.SentiFile",
+        "status": "HALT",
+        "loadLevel": "NOT_AVAILABLE"
+      },
+      "sarah_moolai.Trial1": {
+        "lastModifiedTime": {
+          "$ago_ms": 509617104
+        },
+        "checkpointInformation": null,
+        "rate": 0.0,
+        "appId": {
+          "stringRep": "01f18c7f-2be6-b071-bd91-4e52ffdb86e7"
+        },
+        "cpuRate": 0.0,
+        "fqAppName": "sarah_moolai.Trial1",
+        "status": "STOPPED",
+        "loadLevel": "NOT_AVAILABLE"
+      },
+      "sarah_moolai.Trial2": {
+        "lastModifiedTime": {
+          "$ago_ms": 424192562
+        },
+        "checkpointInformation": null,
+        "rate": 0.0,
+        "appId": {
+          "stringRep": "01f18d46-10e5-5c51-bd91-4e52ffdb86e7"
+        },
+        "cpuRate": 0.0,
+        "fqAppName": "sarah_moolai.Trial2",
+        "status": "STOPPED",
+        "loadLevel": "NOT_AVAILABLE"
+      },
+      "sarah_moolai.Trial3": {
+        "lastModifiedTime": {
+          "$ago_ms": 250752401
+        },
+        "checkpointInformation": null,
+        "rate": 0.0,
+        "appId": {
+          "stringRep": "01f18ed9-e349-ad61-9177-e6ea69f9970d"
+        },
+        "cpuRate": 0.0001213788,
+        "fqAppName": "sarah_moolai.Trial3",
+        "status": "STOPPED",
+        "loadLevel": "NOT_AVAILABLE"
+      },
+      "sarah_moolai.Trial5": {
+        "lastModifiedTime": {
+          "$ago_ms": 186273485
+        },
+        "checkpointInformation": [
+          {
+            "firstRecordedCheckpoint": {
+              "checkpointDuration": "139ms",
+              "checkpointType": "normal",
+              "checkpointTime": "2026-08-03 19:56:50"
+            }
+          },
+          {
+            "lastTwoRecordedCheckpoints": [
+              {
+                "checkpointDuration": "121ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-03 20:04:43"
+              },
+              {
+                "checkpointDuration": "121ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-03 20:04:48"
+              }
+            ]
+          }
+        ],
+        "rate": 0.0,
+        "appId": {
+          "stringRep": "01f18f70-03b7-77b0-b187-2af9bf95d7f2"
+        },
+        "cpuRate": 0.0,
+        "fqAppName": "sarah_moolai.Trial5",
+        "status": "HALT",
+        "loadLevel": "NOT_AVAILABLE"
+      }
+    },
+    "sourceHealthMap": {
+      "RPFinalProd.SentiFile_FileReaderSource": {
+        "eventRate": 0.0,
+        "lastEventTime": 0,
+        "fqSourceName": "RPFinalProd.SentiFile_FileReaderSource"
+      },
+      "sarah_moolai.Trial1_FileReaderSource": {
+        "eventRate": 0.0,
+        "lastEventTime": {
+          "$ago_ms": 425636027
+        },
+        "fqSourceName": "sarah_moolai.Trial1_FileReaderSource"
+      },
+      "sarah_moolai.Trial3_FileReaderSource": {
+        "eventRate": 0.0,
+        "lastEventTime": {
+          "$ago_ms": 188083229
+        },
+        "fqSourceName": "sarah_moolai.Trial3_FileReaderSource"
+      },
+      "sarah_moolai.Trial5_FileReaderSource": {
+        "eventRate": 0.0,
+        "lastEventTime": {
+          "$ago_ms": 183937061
+        },
+        "fqSourceName": "sarah_moolai.Trial5_FileReaderSource"
+      },
+      "sarah_moolai.Trial2_FileReaderSource": {
+        "eventRate": 0.0,
+        "lastEventTime": {
+          "$ago_ms": 403730540
+        },
+        "fqSourceName": "sarah_moolai.Trial2_FileReaderSource"
+      }
+    },
+    "targetHealthMap": {
+      "sarah_moolai.File_Trial5_Target": {
+        "eventRate": 0,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.08,
+                "min": 0.08,
+                "max": 0.08,
+                "count": 1,
+                "latest": 0.08
+              },
+              "at": 1785787475154,
+              "source": "sarah_moolai.Trial5_FileReaderSource",
+              "type": "Idle",
+              "lee": 0.08,
+              "target": "sarah_moolai.File_Trial5_Target"
+            }
+          ]
+        },
+        "fqTargetName": "sarah_moolai.File_Trial5_Target",
+        "lastWriteTime": {
+          "$ago_ms": 183937039
+        }
+      },
+      "sarah_moolai.File_Trial2_Target": {
+        "eventRate": 0,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.005,
+                "min": 0.005,
+                "max": 0.005,
+                "count": 1,
+                "latest": 0.005
+              },
+              "at": 1785568041167,
+              "source": "sarah_moolai.Trial2_FileReaderSource",
+              "type": "Idle",
+              "lee": 0.005,
+              "target": "sarah_moolai.File_Trial2_Target"
+            }
+          ]
+        },
+        "fqTargetName": "sarah_moolai.File_Trial2_Target",
+        "lastWriteTime": {
+          "$ago_ms": 403730534
+        }
+      },
+      "sarah_moolai.File_Trial1_Target": {
+        "eventRate": 0,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.089,
+                "min": 0.005,
+                "max": 0.173,
+                "count": 2,
+                "latest": 0.005
+              },
+              "at": 1785568041479,
+              "source": "sarah_moolai.Trial1_FileReaderSource",
+              "type": "Idle",
+              "lee": 0.005,
+              "target": "sarah_moolai.File_Trial1_Target"
+            }
+          ]
+        },
+        "fqTargetName": "sarah_moolai.File_Trial1_Target",
+        "lastWriteTime": {
+          "$ago_ms": 425630489
+        }
+      },
+      "sarah_moolai.File_Trial3_Target": {
+        "eventRate": 0,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.078,
+                "min": 0.078,
+                "max": 0.078,
+                "count": 1,
+                "latest": 0.078
+              },
+              "at": 1785784581635,
+              "source": "sarah_moolai.Trial3_FileReaderSource",
+              "type": "Idle",
+              "lee": 0.078,
+              "target": "sarah_moolai.File_Trial3_Target"
+            }
+          ]
+        },
+        "fqTargetName": "sarah_moolai.File_Trial3_Target",
+        "lastWriteTime": {
+          "$ago_ms": 188083223
+        }
+      },
+      "RPFinalProd.File_SentiFile_Target": {
+        "eventRate": 0,
+        "lagEnd2End": null,
+        "fqTargetName": "RPFinalProd.File_SentiFile_Target",
+        "lastWriteTime": 0
+      }
+    },
+    "waStoreHealthMap": {
+      "sarah_moolai.Trial2_ExceptionStore": {
+        "fqWAStoreName": "sarah_moolai.Trial2_ExceptionStore",
+        "writeRate": 0,
+        "lastWriteTime": 0
+      },
+      "sarah_moolai.Trial3_ExceptionStore": {
+        "fqWAStoreName": "sarah_moolai.Trial3_ExceptionStore",
+        "writeRate": 0,
+        "lastWriteTime": 0
+      },
+      "sarah_moolai.Trial1_ExceptionStore": {
+        "fqWAStoreName": "sarah_moolai.Trial1_ExceptionStore",
+        "writeRate": 0,
+        "lastWriteTime": 0
+      },
+      "sarah_moolai.Trial5_ExceptionStore": {
+        "fqWAStoreName": "sarah_moolai.Trial5_ExceptionStore",
+        "writeRate": 0,
+        "lastWriteTime": 0
+      }
+    },
+    "issuesList": [],
+    "stateChangeList": [],
+    "clusterSize": 3,
+    "elasticSearch": true,
+    "derbyAlive": true,
+    "agentCount": 0,
+    "kafkaHealthMap": {},
+    "cacheHealthMap": {},
+    "id": "01f19121-5749-35c3-9177-e6ea69f9970d",
+    "startTime": {
+      "$ago_ms": 162651
+    },
+    "endTime": {
+      "$ago_ms": 81911
+    }
+  },
+  "console": {}
+}

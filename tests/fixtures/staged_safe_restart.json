@@ -1,0 +1,221 @@
+{
+  "captured_from": "jobregonr.salesforce2bigquery",
+  "captured_at": "2026-08-05T16:02:22",
+  "derived_from": "trial5_halt.json (real capture, 576 apps)",
+  "staged": "status and timestamps only",
+  "note": "REAL app, STAGED status. jobregonr.salesforce2bigquery is a genuine pipeline on the cluster - real component names, real recorded checkpoints, a Salesforce source and a BigQuery target, none of it invented. It is RUNNING in the capture; here it is staged into HALT so there is something to recover from, and health_after_action stages the recovery. A capture is one instant, and 'restarted and verified' needs two. An API poller is not a whole-dataset re-read connector, so there is no duplication risk and a restart is genuinely the right move - which is why this scenario needs a non-file app. The agent's namespace is pointed at jobregonr for this test.",
+  "health": {
+    "appHealthMap": {
+      "jobregonr.salesforce2bigquery": {
+        "lastModifiedTime": {
+          "$ago_ms": 1204569635
+        },
+        "checkpointInformation": [
+          {
+            "firstRecordedCheckpoint": {
+              "checkpointDuration": "130ms",
+              "checkpointType": "normal",
+              "checkpointTime": "2026-07-23 00:31:26"
+            }
+          },
+          {
+            "lastTwoRecordedCheckpoints": [
+              {
+                "checkpointDuration": "127ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-05 22:50:49"
+              },
+              {
+                "checkpointDuration": "126ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-05 22:55:49"
+              }
+            ]
+          }
+        ],
+        "rate": 0.0,
+        "appId": {
+          "stringRep": "01f1862c-1e96-ac31-9177-e6ea69f9970d"
+        },
+        "cpuRate": 0.0005309562,
+        "fqAppName": "jobregonr.salesforce2bigquery",
+        "status": "HALT",
+        "loadLevel": "NOT_AVAILABLE"
+      }
+    },
+    "sourceHealthMap": {
+      "jobregonr.salesforce2bigquery_Source": {
+        "eventRate": 0.0,
+        "lastEventTime": {
+          "$ago_ms": 300000
+        },
+        "fqSourceName": "jobregonr.salesforce2bigquery_Source"
+      }
+    },
+    "targetHealthMap": {
+      "jobregonr.salesforce2bigquery_Target": {
+        "eventRate": 0,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.08499999999999999,
+                "min": 0.077,
+                "max": 0.093,
+                "count": 2,
+                "latest": 0.093
+              },
+              "at": 1785970819038,
+              "source": "jobregonr.salesforce2bigquery_Source",
+              "type": "Idle",
+              "lee": 0.093,
+              "target": "jobregonr.salesforce2bigquery_Target"
+            }
+          ]
+        },
+        "fqTargetName": "jobregonr.salesforce2bigquery_Target",
+        "lastWriteTime": {
+          "$ago_ms": 300000
+        }
+      }
+    },
+    "waStoreHealthMap": {
+      "jobregonr.salesforce2bigquery_ExceptionStore": {
+        "fqWAStoreName": "jobregonr.salesforce2bigquery_ExceptionStore",
+        "writeRate": 0,
+        "lastWriteTime": 0
+      }
+    },
+    "issuesList": [],
+    "stateChangeList": [
+      {
+        "currentStatus": "HALT",
+        "type": "APPLICATION",
+        "fqName": "jobregonr.salesforce2bigquery",
+        "previousStatus": "RUNNING",
+        "timestamp": {
+          "$ago_ms": 290000
+        }
+      }
+    ],
+    "clusterSize": 3,
+    "elasticSearch": true,
+    "derbyAlive": true,
+    "agentCount": 0,
+    "kafkaHealthMap": {},
+    "cacheHealthMap": {},
+    "id": "01f19121-5749-35c3-9177-e6ea69f9970d"
+  },
+  "health_after_action": {
+    "appHealthMap": {
+      "jobregonr.salesforce2bigquery": {
+        "lastModifiedTime": {
+          "$ago_ms": 1204569635
+        },
+        "checkpointInformation": [
+          {
+            "firstRecordedCheckpoint": {
+              "checkpointDuration": "130ms",
+              "checkpointType": "normal",
+              "checkpointTime": "2026-07-23 00:31:26"
+            }
+          },
+          {
+            "lastTwoRecordedCheckpoints": [
+              {
+                "checkpointDuration": "127ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-05 16:07:41"
+              },
+              {
+                "checkpointDuration": "126ms",
+                "checkpointType": "normal",
+                "checkpointTime": "2026-08-05 16:07:41"
+              }
+            ]
+          }
+        ],
+        "rate": 18.0,
+        "appId": {
+          "stringRep": "01f1862c-1e96-ac31-9177-e6ea69f9970d"
+        },
+        "cpuRate": 0.0005309562,
+        "fqAppName": "jobregonr.salesforce2bigquery",
+        "status": "RUNNING",
+        "loadLevel": "NOT_AVAILABLE"
+      }
+    },
+    "sourceHealthMap": {
+      "jobregonr.salesforce2bigquery_Source": {
+        "eventRate": 18.0,
+        "lastEventTime": {
+          "$ago_ms": 5000
+        },
+        "fqSourceName": "jobregonr.salesforce2bigquery_Source"
+      }
+    },
+    "targetHealthMap": {
+      "jobregonr.salesforce2bigquery_Target": {
+        "eventRate": 18,
+        "lagEnd2End": {
+          "data": [
+            {
+              "recentStats": {
+                "average": 0.08499999999999999,
+                "min": 0.077,
+                "max": 0.093,
+                "count": 2,
+                "latest": 0.093
+              },
+              "at": 1785970819038,
+              "source": "jobregonr.salesforce2bigquery_Source",
+              "type": "Idle",
+              "lee": 0.093,
+              "target": "jobregonr.salesforce2bigquery_Target"
+            }
+          ]
+        },
+        "fqTargetName": "jobregonr.salesforce2bigquery_Target",
+        "lastWriteTime": {
+          "$ago_ms": 4000
+        }
+      }
+    },
+    "waStoreHealthMap": {
+      "jobregonr.salesforce2bigquery_ExceptionStore": {
+        "fqWAStoreName": "jobregonr.salesforce2bigquery_ExceptionStore",
+        "writeRate": 0,
+        "lastWriteTime": 0
+      }
+    },
+    "issuesList": [],
+    "stateChangeList": [
+      {
+        "currentStatus": "HALT",
+        "type": "APPLICATION",
+        "fqName": "jobregonr.salesforce2bigquery",
+        "previousStatus": "RUNNING",
+        "timestamp": {
+          "$ago_ms": 290000
+        }
+      },
+      {
+        "currentStatus": "RUNNING",
+        "type": "APPLICATION",
+        "fqName": "jobregonr.salesforce2bigquery",
+        "previousStatus": "HALT",
+        "timestamp": {
+          "$ago_ms": 10000
+        }
+      }
+    ],
+    "clusterSize": 3,
+    "elasticSearch": true,
+    "derbyAlive": true,
+    "agentCount": 0,
+    "kafkaHealthMap": {},
+    "cacheHealthMap": {},
+    "id": "01f19121-5749-35c3-9177-e6ea69f9970d"
+  },
+  "console": {}
+}
